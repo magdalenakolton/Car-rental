@@ -18,6 +18,7 @@ public:
 	void zwrocRower();
 	void dodajRower();
 
-	vector<Rower> Rowery;
+	vector<Rower> DostRowery;
+	vector<Rower> WypRowery;
 
 };
