@@ -17,5 +17,6 @@ public:
 	void dodajMotocykl();
 	void zwrocMotocykl();
 
-	vector<Motocykl> Motocykle;
+	vector<Motocykl> DostMotocykle;
+	vector<Motocykl> WypMotocykle;
 };
