@@ -19,5 +19,6 @@ public:
 	void dodajSamochod();
 	void zwrocSamochod();
 
+	vector<Samochod> DostSamochody;
 	vector<Samochod> Samochody;
 };
