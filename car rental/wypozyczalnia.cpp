@@ -105,7 +105,7 @@ void Rower::zwrocRower() {
 
 	std::cout << "Który pojazd z listy chcesz zwróciæ?" << endl;
 	for (auto&i : WypRowery) {
-		std::cout << i;
+		std::cout << i.cena << " " << i.data_produkcji <<" "<<i.marka<<" "<<i.kolor;
 	}
 
 	std::cout << "Cena: " << endl;
@@ -137,7 +137,7 @@ void Motocykl::zwrocMotocykl() {
 
 	std::cout << "Który motocykl z listy chcesz zwróciæ?" << endl;
 	for (auto&i : WypMotocykle) {
-		std::cout << *i;
+		std::cout << i.cena << " " << i.data_produkcji << " " << i.marka << " " << i.kolor << " " << i.pojemnosc_silnika << " " << i.spalanie;
 	}
 
 	std::cout << "Cena: " << endl;
@@ -157,7 +157,7 @@ void Motocykl::zwrocMotocykl() {
 	for (i = WypMotocykle.begin(); i != WypMotocykle.end(); i++) {
 		if ((*i).marka == marka && (*i).kolor == kolor && (*i).cena == cena && (*i).data_produkcji == data_produkcji, (*i).pojemnosc_silnika == pojemnosc_silnika && (*i).spalanie == spalanie) {
 			WypMotocykle.erase(i);
-			DostRowery.push_back(Motocykl(marka, kolor, cena, data_produkcji, pojemnosc_silnika, spalanie));
+			DostMotocykle.push_back(Motocykl(marka, kolor, cena, data_produkcji, pojemnosc_silnika, spalanie));
 			std::cout << "Pomyœlnie zwrócono rower. " << endl;
 		}
 		else std::cout << "Brak podanego pojazdu w bazie." << endl;
@@ -175,7 +175,7 @@ void Samochod::zwrocSamochod() {
 
 	std::cout << "Który samochod z listy chcesz zwróciæ?" << endl;
 	for (auto&i : WypSamochody) {
-		std::cout << *i;
+		std::cout << i.cena << " " << i.data_produkcji << " " << i.marka << " " << i.kolor<<" "<<i.pojemnosc_silnika<<" "<<i.ilosc_miejsc_siedzacych<<" "<<i.pojemnosc_bagaznika<<" "<<i.spalanie;
 	}
 
 	std::cout << "Cena: " << endl;
@@ -199,7 +199,7 @@ void Samochod::zwrocSamochod() {
 	for (i = WypSamochody.begin(); i != WypSamochody.end(); i++) {
 		if ((*i).marka == marka && (*i).kolor == kolor && (*i).cena == cena && (*i).data_produkcji == data_produkcji, (*i).pojemnosc_silnika == pojemnosc_silnika && (*i).spalanie == spalanie) {
 			WypSamochody.erase(i);
-			DostRowery.push_back(Samochod(marka, kolor, cena, data_produkcji, pojemnosc_silnika, spalanie, ilosc_miejsc_siedzacych, pojemnosc_bagaznika));
+			DostSamochody.push_back(Samochod(marka, kolor, cena, data_produkcji, pojemnosc_silnika, spalanie, ilosc_miejsc_siedzacych, pojemnosc_bagaznika));
 			std::cout << "Pomyœlnie zwrócono rower. " << endl;
 		}
 		else std::cout << "Brak podanego pojazdu w bazie." << endl;
@@ -249,7 +249,7 @@ void Rower::wypozyczRower() {
 
 	std::cout << "Który pojazd z listy chcesz wypozyczyc?" << endl;
 	for (auto&i : WypRowery) {
-		std::cout << i;
+		std::cout << i.cena << " " << i.data_produkcji << " " << i.marka << " " << i.kolor;
 	}
 
 	std::cout << "Cena: " << endl;
@@ -287,7 +287,8 @@ void Motocykl::wypozyczMotocykl() {
 
 	std::cout << "Który motocykl z listy chcesz wypozyczyc?" << endl;
 	for (auto&i : WypMotocykle) {
-		std::cout << *i;
+		std::cout << i.cena << " " << i.data_produkcji << " " << i.marka << " " << i.kolor << " " << i.pojemnosc_silnika << " " << i.spalanie;
+
 	}
 
 	std::cout << "Cena: " << endl;
@@ -307,7 +308,7 @@ void Motocykl::wypozyczMotocykl() {
 	for (i = WypMotocykle.begin(); i != WypMotocykle.end(); i++) {
 		if ((*i).marka == marka && (*i).kolor == kolor && (*i).cena == cena && (*i).data_produkcji == data_produkcji, (*i).pojemnosc_silnika == pojemnosc_silnika && (*i).spalanie == spalanie) {
 			DostMotocykle.erase(i);
-			WypRowery.push_back(Motocykl(marka, kolor, cena, data_produkcji, pojemnosc_silnika, spalanie));
+			WypMotocykle.push_back(Motocykl(marka, kolor, cena, data_produkcji, pojemnosc_silnika, spalanie));
 			std::cout << "Pomyœlnie wypozyczono rower. " << endl;
 			r.zarezerwuj();
 			p.dodaj_Platnosc();
@@ -329,7 +330,8 @@ void Samochod::wypozyczSamochod() {
 
 	std::cout << "Który samochod z listy chcesz wypozyczyc?" << endl;
 	for (auto&i : WypSamochody) {
-		std::cout << *i;
+		std::cout <<i.cena << " " << i.data_produkcji << " " << i.marka << " " << i.kolor << " " << i.pojemnosc_silnika << " " << i.ilosc_miejsc_siedzacych << " " << i.pojemnosc_bagaznika << " " << i.spalanie;
+
 	}
 
 	std::cout << "Cena: " << endl;
@@ -353,7 +355,7 @@ void Samochod::wypozyczSamochod() {
 	for (i = WypSamochody.begin(); i != WypSamochody.end(); i++) {
 		if ((*i).marka == marka && (*i).kolor == kolor && (*i).cena == cena && (*i).data_produkcji == data_produkcji, (*i).pojemnosc_silnika == pojemnosc_silnika && (*i).spalanie == spalanie) {
 			DostSamochody.erase(i);
-			WypRowery.push_back(Samochod(marka, kolor, cena, data_produkcji, pojemnosc_silnika, spalanie, ilosc_miejsc_siedzacych, pojemnosc_bagaznika));
+			WypSamochody.push_back(Samochod(marka, kolor, cena, data_produkcji, pojemnosc_silnika, spalanie, ilosc_miejsc_siedzacych, pojemnosc_bagaznika));
 			std::cout << "Pomyœlnie wypozyczono samochod. " << endl;
 			r.zarezerwuj();
 			p.dodaj_Platnosc();
@@ -410,7 +412,7 @@ void Rower::dodajRower() {
 	std::cout << "Kolor: " << endl;
 	std::cin >> kolor;
 
-	DostRowery.push_back(Rower(marka, kolor, cena, data_produkcji);
+	DostRowery.push_back(Rower(marka, kolor, cena, data_produkcji));
 	std::cout << "Pomyœlnie dodano rower. " << endl;
 	
 }
@@ -472,17 +474,18 @@ void Wypozyczalnia::sprawdzDostepnosc() {
 
 	vector<Rower>::iterator i;
 	for (i = r.DostRowery.begin(); i != r.DostRowery.end(); i++) {
-		std::cout << i;
+		std::cout << (*i).cena << " " << (*i).data_produkcji << " " << (*i).marka << " " << (*i).kolor;
 	}
 
 	vector<Motocykl>::iterator j;
 	for (j = m.DostMotocykle.begin(); j != m.DostMotocykle.end(); j++) {
-		std::cout << j;
+		std::cout << (*j).cena << " " << (*j).data_produkcji << " " << (*j).marka << " " << (*j).kolor << " " << (*j).pojemnosc_silnika << " " << (*j).spalanie;
+
 	}
 
 	vector<Samochod>::iterator k;
 	for (k = s.DostSamochody.begin(); k != s.DostSamochody.end(); k++) {
-		std::cout << k;
+		std::cout << (*k).cena << " " << (*k).data_produkcji << " " << (*k).marka << " " << (*k).kolor << " " << (*k).pojemnosc_silnika << " " << (*k).ilosc_miejsc_siedzacych << " " << (*k).pojemnosc_bagaznika << " " << (*k).spalanie;
 	}
 
 	

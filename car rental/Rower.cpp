@@ -18,7 +18,8 @@ Rower::Rower()
 {
 	kolor = "brak";
 	marka = "brak";
-	data_produkcji = 
+	data_produkcji = "brak";
+	cena = 0;
 }
 
 

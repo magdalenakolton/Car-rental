@@ -21,6 +21,12 @@ Motocykl::Motocykl()
 {
 	pojemnosc_silnika = 0;
 	spalanie = 0;
+	cena = "brak";
+	data_produkcji = "brak";
+	kolor = "brak";
+	marka = "brak";
+
+
 }
 
 
