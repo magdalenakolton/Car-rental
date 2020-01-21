@@ -7,10 +7,14 @@
 using namespace std;
 
 
-Motocykl::Motocykl(int a, int b)
+Motocykl::Motocykl(string a, string b, string cenaa, string data_prod, int poj, int sp)
 {
-	pojemnosc_silnika = a;
-	spalanie = b;
+	cena = cenaa;
+	data_produkcji = data_prod;
+	kolor = a;
+	marka = b;
+	pojemnosc_silnika = poj;
+	spalanie = sp;
 }
 
 Motocykl::Motocykl()

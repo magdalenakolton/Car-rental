@@ -1,13 +1,18 @@
-#pragma once
-#include <ctime>
+#include "wypozyczalnia.h"
+#include <string>
+#include <iostream>
 
-class Rezerwacja
-{
-	struct tm data_rozpoczecia;
-	struct tm data_zakonczenia;
+using namespace std;
+
+
+class rezerwacja {
 public:
-	Rezerwacja();
-	bool zarezerwuj();
-	bool sprawdz_dostepnosc();
-};
+	string data_rozpoczecia;
+	string data_zakonczenia;
 
+	rezerwacja(string, string);
+	rezerwacja();
+
+	void zarezerwuj();
+
+};

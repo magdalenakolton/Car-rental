@@ -6,7 +6,7 @@
 #include "Pojazd.h"
 using namespace std;
 
-Pojazd::Pojazd(int a, string b)
+Pojazd::Pojazd(string a, string b)
 {
 	cena = a;
 	data_produkcji = b;
@@ -14,7 +14,7 @@ Pojazd::Pojazd(int a, string b)
 
 Pojazd::Pojazd()
 {
-	cena= 0;
+	cena= "brak";
 	data_produkcji= "brak";
 }
 

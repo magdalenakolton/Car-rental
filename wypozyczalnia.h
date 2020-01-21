@@ -2,21 +2,20 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "klient.h";
+#include "Motocykl.h"
+#include "Pojazd.h"
+#include "Rower.h"
+#include "Samochod.h"
+#include "Platnosc.h"
+#include "rezerwacja.h"
 
 using namespace std;
 
 class Wypozyczalnia {
 public:
-	Wypozyczalnia();
-	void wybor();
-	void dodajPojazd();
-	void wyswietlPojazdy();
-	void wypozyczPojazd();
-	void sprawdzDostepnosc();
-	void zwrocPojazd();
-	void zarejestrujKlienta();
-	void wyswietlKlientow();
 
-private:
-	vector<klient> m_klienci;
+	void wybor(); 
+	void sprawdzDostepnosc();
+	void zakoncz();
 };

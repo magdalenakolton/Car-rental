@@ -7,14 +7,15 @@ class Pojazd
 {
 public:
 	
-	int cena;
+	string cena;
 	string data_produkcji;
 	
 	Pojazd();
-	Pojazd(int, string); 
+	Pojazd(string, string); 
 	
 	void zwrocPojazd();
 	void dodajPojazd();
-	void wyswietlPojazd();
+	void wypozyczPojazd();
+
 	
 };

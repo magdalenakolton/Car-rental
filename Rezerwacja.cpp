@@ -1,17 +1,17 @@
-#include "Rezerwacja.h"
+#include "wypozyczalnia.h"
+#include "rezerwacja.h"
+#include <string>
+#include <iostream>
 
+using namespace std;
 
-bool Rezerwacja::sprawdz_dostepnosc() 
-{
-
+rezerwacja::rezerwacja(string a, string b) {
+	data_rozpoczecia = a;
+	data_zakonczenia = b;
 }
 
-bool Rezerwacja::zarezerwuj()
-{
-
+rezerwacja::rezerwacja() {
+	data_rozpoczecia = "brak";
+	data_zakonczenia = "brak";
 }
 
-Rezerwacja::Rezerwacja()
-{
-
-}

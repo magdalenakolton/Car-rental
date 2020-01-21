@@ -4,8 +4,10 @@ using namespace std;
 
 main() {
 	Wypozyczalnia W;
-	W.wybor();
-	cout << endl;
+	while (true) {
+		W.wybor();
+		cout << endl;
+	}
 
 	system("pause");
 	return 0;
